@@ -5,11 +5,12 @@ import com.carlosjr.days_of_kotlin.year_2024.january.week_01.BasicSyntaxOne.Comp
 import com.carlosjr.days_of_kotlin.year_2024.january.week_01.BasicSyntaxOne.Companion.functionsInKotlin
 import com.carlosjr.days_of_kotlin.year_2024.january.week_01.BasicSyntaxOne.Companion.ifInKotlin
 import com.carlosjr.days_of_kotlin.year_2024.january.week_01.BasicSyntaxOne.Companion.lambdaInKotlin
+import com.carlosjr.days_of_kotlin.year_2024.january.week_01.BasicSyntaxOne.Companion.variableInKotlin
 import com.carlosjr.days_of_kotlin.year_2024.january.week_01.BasicSyntaxOne.Companion.whatIsKotlin
 
 class BasicSyntaxOne {
 
-    fun printText(text: String) {
+    fun <T>printText(text: T) {
         println("#$text")
         println("# -------------------------------------------------------------------------------- #")
     }
@@ -22,6 +23,17 @@ class BasicSyntaxOne {
                 "fun  main (args: Array < String >) {\n" +
                 "    println( \"Hello, Kotlin!\" )\n" +
                 "}"
+
+        const val variableInKotlin: String = "In Kotlin, a variable is declared using either the var or val keyword. " +
+                "\nThe var keyword is used to declare a variable whose value can be changed later on, " +
+                "\nwhile the val keyword is used to declare a read-only variable whose value cannot be " +
+                "\nchanged after it is initialized. " +
+                "\nHere is an example of declaring a variable in Kotlin:\n" +
+                "\n" +
+                "var x = 5\n" +
+                "val y = \"Hello, World!\"\n" +
+                "In this example, x is a variable of type Int with an initial value of 5, while y is a variable of type String " +
+                "\nwith an initial value of \"Hello, World!\"."
 
         const val ifInKotlin: String = "val x = 10\n" +
                 "if (x > 5) {\n" +
@@ -55,10 +67,52 @@ fun main() {
     baseSyntax.printText(whatIsKotlin)
     baseSyntax.printText(basicKotlinProgram)
 
+    //Variables
+    baseSyntax.printText(variableInKotlin)
+    var number = 0
+    number = 5
+    val text = "Hello, World!"
+
+    baseSyntax.printText(number)
+    baseSyntax.printText(text)
+
+    //Here is an example of declaring variables of different data types in Kotlin:
+    val a: Int = 10
+    val b: Long = 10000000000
+    val c: Float = 3.14F
+    val d: Double = 3.141592653589793
+    val e: Boolean = true
+    val f: Char = 'A'
+    val g: String = "Hello, World!"
+
+    //Operators
+    // Arithmetic operators
+    val x = 10
+    val y = 5
+    val sum = x + y
+    val difference = x - y
+    val product = x * y
+    val quotient = x / y
+    val remainder = x % y
+
+// Comparison operators
+    val numberFive = 5
+    val numberTen = 10
+    val greaterThan = numberTen > numberFive
+    val lessThan = numberFive < numberTen
+    val equalTo = numberFive == numberTen
+    val notEqualTo = numberFive != numberTen
+
+// Logical operators
+    val trueValue = true
+    val falseValue = false
+    val and = trueValue && falseValue
+    val or = trueValue || falseValue
+    val not = !trueValue
+
     //Control Structures
     baseSyntax.printText(ifInKotlin)
-    val x = 10
-    if (x > 5) {
+    if (numberTen > numberFive) {
         baseSyntax.printText("x is greater than 5")
     } else {
         baseSyntax.printText("x is less than or equal to 5")
@@ -78,10 +132,10 @@ fun main() {
     fun sum(a: Int, b: Int): Int {
         return a + b
     }
-    baseSyntax.printText(sum(2, 3).toString())
+    baseSyntax.printText(sum(2, 3))
 
     baseSyntax.printText(lambdaInKotlin)
     val sumLambda = { a: Int, b: Int -> a + b }
-    baseSyntax.printText(sumLambda(2, 3).toString())
+    baseSyntax.printText(sumLambda(2, 3))
 
 }
