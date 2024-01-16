@@ -1,4 +1,4 @@
-package com.carlosjr.days_of_kotlin.year_2024.january
+package com.carlosjr.days_of_kotlin.presenter.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
