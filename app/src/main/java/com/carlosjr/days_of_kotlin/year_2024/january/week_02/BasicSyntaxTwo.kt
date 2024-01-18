@@ -1,5 +1,6 @@
 package com.carlosjr.days_of_kotlin.year_2024.january.week_02
 
+import com.carlosjr.days_of_kotlin.year_2024.january.week_02.BasicSyntaxTwo.Companion.forInKotlin
 import com.carlosjr.days_of_kotlin.year_2024.january.week_02.BasicSyntaxTwo.Companion.ifInKotlin
 import com.carlosjr.days_of_kotlin.year_2024.january.week_02.BasicSyntaxTwo.Companion.whenInKotlin
 
@@ -34,6 +35,20 @@ class BasicSyntaxTwo {
                 "}\n" +
                 "In this example, the when expression checks the value of the number variable against " +
                     "\neach branch. If a match is found, the corresponding block of code is executed."
+
+        const val forInKotlin: String =
+            "In Kotlin, for loops are used to iterate over ranges, arrays, or other iterable objects. " +
+                    "\nHere's an example:" +
+                "\n" +
+                "fun main() {\n" +
+                "    val names = arrayOf(\"John\", \"Jane\", \"Doe\")\n" +
+                "\n" +
+                "    for (name in names) {\n" +
+                "        println(\"Hello, name!)\n" +
+                "    }\n" +
+                "}\n" +
+                "In this example, the for loop iterates over the names array and prints a greeting " +
+                    "\nfor each name."
     }
 }
 
@@ -60,4 +75,11 @@ fun main() {
     }
     baseSyntax.printText("Maximum value: $max")
 
+    //Control Flow: Loops - For
+    baseSyntax.printText(forInKotlin)
+    val names = arrayOf("John", "Jane", "Doe")
+
+    for (name in names) {
+        baseSyntax.printText("Hello, $name!")
+    }
 }
