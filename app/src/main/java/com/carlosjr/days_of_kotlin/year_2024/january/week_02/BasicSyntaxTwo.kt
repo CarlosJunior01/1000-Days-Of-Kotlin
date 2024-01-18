@@ -6,7 +6,7 @@ class BasicSyntaxTwo {
 
     fun <T>printText(text: T) {
         println("#$text")
-        println("# ---------------------------------------------------------------------------------------- #")
+        println("# --------------------------------------------------------------------------------------- #")
     }
     companion object {
         const val ifInKotlin: String =
