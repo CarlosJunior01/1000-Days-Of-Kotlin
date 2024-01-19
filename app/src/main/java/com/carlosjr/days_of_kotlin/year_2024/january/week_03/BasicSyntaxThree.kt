@@ -1,6 +1,8 @@
 package com.carlosjr.days_of_kotlin.year_2024.january.week_03
 
+import com.carlosjr.days_of_kotlin.year_2024.january.week_03.BasicSyntaxThree.Companion.destructuring
 import com.carlosjr.days_of_kotlin.year_2024.january.week_03.BasicSyntaxThree.Companion.doWhileInKotlin
+import com.carlosjr.days_of_kotlin.year_2024.january.week_03.BasicSyntaxThree.Companion.elvisOperator
 import com.carlosjr.days_of_kotlin.year_2024.january.week_03.BasicSyntaxThree.Companion.iteratingListWithIndices
 import com.carlosjr.days_of_kotlin.year_2024.january.week_03.BasicSyntaxThree.Companion.loopForKotlin
 import com.carlosjr.days_of_kotlin.year_2024.january.week_03.BasicSyntaxThree.Companion.whileLoopKotlin
@@ -78,6 +80,21 @@ class BasicSyntaxThree {
                     "}\n" +
                     "In this example, we use a do-while loop to repeatedly request user input until " +
                     "\na positive number is entered."
+
+        const val elvisOperator: String =
+            "When you have a nullable reference, person.name, you can say if person.name is not null, " +
+                    "\nuse it, otherwise use some non-null value: “unknown”" +
+                    "val name: String = person.name ?: “unknown”\n" +
+                    "val age = person.age ?: return"
+
+        const val destructuring: String =
+            "Sometimes it is convenient to destructure an object into a number of variables, for example:\n" +
+                    "\n" +
+                    "val (name, age) = person\n" +
+                    "This syntax is called a destructuring declaration. A destructuring declaration " +
+                    "\ncreates multiple variables at once. You have declared two new variables: name " +
+                    "\nand age, and can use them independently:" +
+                    "\n(Name = {name}, Age = {age})"
     }
 }
 
@@ -122,4 +139,21 @@ fun main() {
     } while (numberInt <= 0)
 
     baseSyntax.printText("You entered: $numberInt")
+
+    //Elvis Operator
+    baseSyntax.printText(elvisOperator)
+    val personName: String? = null
+    val personAge: Int? = 18
+    val testName: String = personName ?: "unknown"
+    val testAge = personAge ?: return
+
+    baseSyntax.printText("Name is $testName, age is $testAge")
+
+    //Destructuring declarations
+    baseSyntax.printText(destructuring)
+    val person = Person("Goku", 30)
+    val (name, age) = person
+    baseSyntax.printText("Name = $name, Age = $age")
 }
+
+data class Person(val name: String, val age: Int)
