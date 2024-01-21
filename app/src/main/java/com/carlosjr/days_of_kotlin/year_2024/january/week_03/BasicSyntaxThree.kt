@@ -3,6 +3,7 @@ package com.carlosjr.days_of_kotlin.year_2024.january.week_03
 import com.carlosjr.days_of_kotlin.year_2024.january.week_03.BasicSyntaxThree.Companion.destructuring
 import com.carlosjr.days_of_kotlin.year_2024.january.week_03.BasicSyntaxThree.Companion.doWhileInKotlin
 import com.carlosjr.days_of_kotlin.year_2024.january.week_03.BasicSyntaxThree.Companion.elvisOperator
+import com.carlosjr.days_of_kotlin.year_2024.january.week_03.BasicSyntaxThree.Companion.forLoopRange
 import com.carlosjr.days_of_kotlin.year_2024.january.week_03.BasicSyntaxThree.Companion.iteratingListWithIndices
 import com.carlosjr.days_of_kotlin.year_2024.january.week_03.BasicSyntaxThree.Companion.loopForKotlin
 import com.carlosjr.days_of_kotlin.year_2024.january.week_03.BasicSyntaxThree.Companion.whileLoopKotlin
@@ -95,6 +96,10 @@ class BasicSyntaxThree {
                     "\ncreates multiple variables at once. You have declared two new variables: name " +
                     "\nand age, and can use them independently:" +
                     "\n(Name = {name}, Age = {age})"
+
+        const val forLoopRange: String =
+            "For loops get superpowers when used with two other Kotlin features: range expressions " +
+                    "\nand destructuring. Docs: ranges, destructuring."
     }
 }
 
@@ -154,6 +159,47 @@ fun main() {
     val person = Person("Goku", 30)
     val (name, age) = person
     baseSyntax.printText("Name = $name, Age = $age")
+
+    //For loops, range expressions and destructuring
+    baseSyntax.printText(forLoopRange)
+
+    // iterating in the range 1 to 100
+    println("// iterating in the range 1 to 100 \nfor(i in 1..200) {…}\n")
+    var result: String = ""
+    for(i in 1..20) {
+        result += "$i "
+    }
+    baseSyntax.printText("i: = $result")
+
+    // iterating backwards, in the range 100 to 1
+    println("// iterating backwards, in the range 100 to 1 \nfor(i in 20 downTo 1){…}\n")
+    result = ""
+    for(i in 20 downTo 1) {
+        result += "$i "
+    }
+    baseSyntax.printText("i: = $result")
+
+    // iterating over an array, getting every other element
+    println("// iterating over an array, getting every other element \nval array = arrayOf(“a”, “b”, “x”) \nfor(i in 1 until array.size step 2 ){…}\n")
+    result = ""
+    val array = arrayOf("a", "c", "x")
+    for(i in 1 until array.size step 2 ){
+        result += "$i "
+    }
+    baseSyntax.printText("i: = $result")
+
+    // iterating over an array with the item index and destructuring
+    println("// iterating over an array with the item index and destructuring \nfor((index, element) in array.withIndex()) {…}\n")
+    for((index, element) in array.withIndex()) {
+        baseSyntax.printText("index: = $index - element: = $element")
+    }
+
+    // iterating over a map
+    println("// iterating over a map \nval map = mapOf(1 to “one”, 2 to “two”) \nfor( (key, value) in map){…}")
+    val map = mapOf(1 to "one", 2 to "two")
+    for( (key, value) in map){
+        baseSyntax.printText("index: = $key - element: = $value")
+    }
 }
 
 data class Person(val name: String, val age: Int)
