@@ -99,7 +99,7 @@ class BasicSyntaxThree {
 
         const val forLoopRange: String =
             "For loops get superpowers when used with two other Kotlin features: range expressions " +
-                    "\nand destructuring. Docs: ranges, destructuring."
+                    "\nand destructuring."
     }
 }
 
