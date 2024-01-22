@@ -16,6 +16,11 @@ class BasicSyntaxThree {
         println("# --------------------------------------------------------------------------------------- #")
     }
 
+    fun sum(num1: Int, num2: Int) {
+        val result = num1 + num2
+        printText("Sum $num1 + $num2 = $result")
+    }
+
     companion object {
         const val loopForKotlin: String =
             "For Loop\n" +
@@ -200,6 +205,11 @@ fun main() {
     for( (key, value) in map){
         baseSyntax.printText("index: = $key - element: = $value")
     }
+
+    // functions
+    println("//Function in Kotlin\n")
+    baseSyntax.sum(1, 2)
+
 }
 
 data class Person(val name: String, val age: Int)
