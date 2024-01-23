@@ -1,12 +1,12 @@
-package com.carlosjr.days_of_kotlin.year_2024.january.week_01
+package com.carlosjr.days_of_kotlin.year_2024.a_january.week_01
 
-import com.carlosjr.days_of_kotlin.year_2024.january.week_01.BasicSyntaxOne.Companion.basicKotlinProgram
-import com.carlosjr.days_of_kotlin.year_2024.january.week_01.BasicSyntaxOne.Companion.forInKotlin
-import com.carlosjr.days_of_kotlin.year_2024.january.week_01.BasicSyntaxOne.Companion.functionsInKotlin
-import com.carlosjr.days_of_kotlin.year_2024.january.week_01.BasicSyntaxOne.Companion.ifInKotlin
-import com.carlosjr.days_of_kotlin.year_2024.january.week_01.BasicSyntaxOne.Companion.lambdaInKotlin
-import com.carlosjr.days_of_kotlin.year_2024.january.week_01.BasicSyntaxOne.Companion.variableInKotlin
-import com.carlosjr.days_of_kotlin.year_2024.january.week_01.BasicSyntaxOne.Companion.whatIsKotlin
+import com.carlosjr.days_of_kotlin.year_2024.a_january.week_01.BasicSyntaxOne.Companion.basicKotlinProgram
+import com.carlosjr.days_of_kotlin.year_2024.a_january.week_01.BasicSyntaxOne.Companion.forInKotlin
+import com.carlosjr.days_of_kotlin.year_2024.a_january.week_01.BasicSyntaxOne.Companion.functionsInKotlin
+import com.carlosjr.days_of_kotlin.year_2024.a_january.week_01.BasicSyntaxOne.Companion.ifInKotlin
+import com.carlosjr.days_of_kotlin.year_2024.a_january.week_01.BasicSyntaxOne.Companion.lambdaInKotlin
+import com.carlosjr.days_of_kotlin.year_2024.a_january.week_01.BasicSyntaxOne.Companion.variableInKotlin
+import com.carlosjr.days_of_kotlin.year_2024.a_january.week_01.BasicSyntaxOne.Companion.whatIsKotlin
 import com.carlosjr.extensions.printText
 
 class BasicSyntaxOne {

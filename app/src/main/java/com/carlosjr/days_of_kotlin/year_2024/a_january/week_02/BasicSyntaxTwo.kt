@@ -1,9 +1,9 @@
-package com.carlosjr.days_of_kotlin.year_2024.january.week_02
+package com.carlosjr.days_of_kotlin.year_2024.a_january.week_02
 
-import com.carlosjr.days_of_kotlin.year_2024.january.week_02.BasicSyntaxTwo.Companion.forInKotlin
-import com.carlosjr.days_of_kotlin.year_2024.january.week_02.BasicSyntaxTwo.Companion.ifInKotlin
-import com.carlosjr.days_of_kotlin.year_2024.january.week_02.BasicSyntaxTwo.Companion.whenInKotlin
-import com.carlosjr.days_of_kotlin.year_2024.january.week_02.BasicSyntaxTwo.Companion.whileInKotlin
+import com.carlosjr.days_of_kotlin.year_2024.a_january.week_02.BasicSyntaxTwo.Companion.forInKotlin
+import com.carlosjr.days_of_kotlin.year_2024.a_january.week_02.BasicSyntaxTwo.Companion.ifInKotlin
+import com.carlosjr.days_of_kotlin.year_2024.a_january.week_02.BasicSyntaxTwo.Companion.whenInKotlin
+import com.carlosjr.days_of_kotlin.year_2024.a_january.week_02.BasicSyntaxTwo.Companion.whileInKotlin
 import com.carlosjr.extensions.printText
 
 class BasicSyntaxTwo {
