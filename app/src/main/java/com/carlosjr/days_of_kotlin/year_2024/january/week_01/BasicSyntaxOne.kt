@@ -7,13 +7,9 @@ import com.carlosjr.days_of_kotlin.year_2024.january.week_01.BasicSyntaxOne.Comp
 import com.carlosjr.days_of_kotlin.year_2024.january.week_01.BasicSyntaxOne.Companion.lambdaInKotlin
 import com.carlosjr.days_of_kotlin.year_2024.january.week_01.BasicSyntaxOne.Companion.variableInKotlin
 import com.carlosjr.days_of_kotlin.year_2024.january.week_01.BasicSyntaxOne.Companion.whatIsKotlin
+import com.carlosjr.extensions.printText
 
 class BasicSyntaxOne {
-
-    fun <T>printText(text: T) {
-        println("#$text")
-        println("# -------------------------------------------------------------------------------- #")
-    }
     companion object {
         const val whatIsKotlin: String = "Kotlin is a statically typed programming language that runs " +
                 "on the Java Virtual Machine (JVM). \nIt is designed to be concise, expressive, and safe. " +
@@ -63,18 +59,17 @@ class BasicSyntaxOne {
 }
 
 fun main() {
-    val baseSyntax = BasicSyntaxOne()
-    baseSyntax.printText(whatIsKotlin)
-    baseSyntax.printText(basicKotlinProgram)
+    printText(whatIsKotlin)
+    printText(basicKotlinProgram)
 
     //Variables
-    baseSyntax.printText(variableInKotlin)
+    printText(variableInKotlin)
     var number = 0
     number = 5
     val text = "Hello, World!"
 
-    baseSyntax.printText(number)
-    baseSyntax.printText(text)
+    printText(number)
+    printText(text)
 
     //Here is an example of declaring variables of different data types in Kotlin:
     val a: Int = 10
@@ -111,31 +106,31 @@ fun main() {
     val not = !trueValue
 
     //Control Structures
-    baseSyntax.printText(ifInKotlin)
+    printText(ifInKotlin)
     if (numberTen > numberFive) {
-        baseSyntax.printText("x is greater than 5")
+        printText("x is greater than 5")
     } else {
-        baseSyntax.printText("x is less than or equal to 5")
+        printText("x is less than or equal to 5")
     }
 
-    baseSyntax.printText(forInKotlin)
+    printText(forInKotlin)
     val numbers = arrayOf(1, 2, 3, 4, 5)
     var numberResult = ""
 
     for (number in numbers) {
         numberResult += "$number "
     }
-    baseSyntax.printText(numberResult)
+    printText(numberResult)
 
     //Functions
-    baseSyntax.printText(functionsInKotlin)
+    printText(functionsInKotlin)
     fun sum(a: Int, b: Int): Int {
         return a + b
     }
-    baseSyntax.printText(sum(2, 3))
+    printText(sum(2, 3))
 
-    baseSyntax.printText(lambdaInKotlin)
+    printText(lambdaInKotlin)
     val sumLambda = { a: Int, b: Int -> a + b }
-    baseSyntax.printText(sumLambda(2, 3))
+    printText(sumLambda(2, 3))
 
 }

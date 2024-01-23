@@ -4,13 +4,9 @@ import com.carlosjr.days_of_kotlin.year_2024.january.week_02.BasicSyntaxTwo.Comp
 import com.carlosjr.days_of_kotlin.year_2024.january.week_02.BasicSyntaxTwo.Companion.ifInKotlin
 import com.carlosjr.days_of_kotlin.year_2024.january.week_02.BasicSyntaxTwo.Companion.whenInKotlin
 import com.carlosjr.days_of_kotlin.year_2024.january.week_02.BasicSyntaxTwo.Companion.whileInKotlin
+import com.carlosjr.extensions.printText
 
 class BasicSyntaxTwo {
-
-    fun <T> printText(text: T) {
-        println("#$text")
-        println("# --------------------------------------------------------------------------------------- #")
-    }
 
     companion object {
         const val ifInKotlin: String =
@@ -69,18 +65,17 @@ class BasicSyntaxTwo {
 }
 
 fun main() {
-    val baseSyntax = BasicSyntaxTwo()
 
     //Control Flow: If
-    baseSyntax.printText(ifInKotlin)
+    printText(ifInKotlin)
     val a = 10
     val b = 20
 
     val max = if (a > b) a else b
-    baseSyntax.printText("Maximum value: $max")
+    printText("Maximum value: $max")
 
     //Control Flow: When
-    baseSyntax.printText(whenInKotlin)
+    printText(whenInKotlin)
     val number = 3
 
     when (number) {
@@ -89,22 +84,22 @@ fun main() {
         3 -> println("Three")
         else -> println("Unknown number")
     }
-    baseSyntax.printText("Maximum value: $max")
+    printText("Maximum value: $max")
 
     //Control Flow: Loops - For
-    baseSyntax.printText(forInKotlin)
+    printText(forInKotlin)
     val names = arrayOf("John", "Jane", "Doe")
 
     for (name in names) {
-        baseSyntax.printText("Hello, $name!")
+        printText("Hello, $name!")
     }
 
     //Control Flow: Loops - While
-    baseSyntax.printText(whileInKotlin)
+    printText(whileInKotlin)
     var counter = 1
 
     while (counter <= 5) {
-        baseSyntax.printText("Counter: $counter")
+        printText("Counter: $counter")
         counter++
     }
 }

@@ -7,14 +7,10 @@ import com.carlosjr.days_of_kotlin.year_2024.january.week_03.BasicSyntaxThree.Co
 import com.carlosjr.days_of_kotlin.year_2024.january.week_03.BasicSyntaxThree.Companion.iteratingListWithIndices
 import com.carlosjr.days_of_kotlin.year_2024.january.week_03.BasicSyntaxThree.Companion.loopForKotlin
 import com.carlosjr.days_of_kotlin.year_2024.january.week_03.BasicSyntaxThree.Companion.whileLoopKotlin
+import com.carlosjr.extensions.printText
 import java.util.Scanner
 
 class BasicSyntaxThree {
-
-    fun <T> printText(text: T) {
-        println("#$text")
-        println("# --------------------------------------------------------------------------------------- #")
-    }
 
     fun sum(num1: Int, num2: Int) {
         val result = num1 + num2
@@ -112,22 +108,22 @@ fun main() {
     val baseSyntax = BasicSyntaxThree()
 
     //Loop: For
-    baseSyntax.printText(loopForKotlin)
+    printText(loopForKotlin)
 
     for (i in 1..5) {
-        baseSyntax.printText("Number: $i")
+        printText("Number: $i")
     }
 
     //Loop: For with index
-    baseSyntax.printText(iteratingListWithIndices)
+    printText(iteratingListWithIndices)
     val animals = listOf("Dog", "Cat", "Elephant", "Giraffe")
 
     for (index in animals.indices) {
-        baseSyntax.printText("Animal at index $index: ${animals[index]}")
+        printText("Animal at index $index: ${animals[index]}")
     }
 
     //Loop: While
-    baseSyntax.printText(whileLoopKotlin)
+    printText(whileLoopKotlin)
     var sum = 0
     var number = 1
 
@@ -136,10 +132,10 @@ fun main() {
         number++
     }
 
-    baseSyntax.printText("Sum: $sum")
+    printText("Sum: $sum")
 
     //Loop: Do While
-    baseSyntax.printText(doWhileInKotlin)
+    printText(doWhileInKotlin)
     val scanner = Scanner(System.`in`)
     var numberInt: Int
 
@@ -148,25 +144,25 @@ fun main() {
         numberInt = scanner.nextInt()
     } while (numberInt <= 0)
 
-    baseSyntax.printText("You entered: $numberInt")
+    printText("You entered: $numberInt")
 
     //Elvis Operator
-    baseSyntax.printText(elvisOperator)
+    printText(elvisOperator)
     val personName: String? = null
     val personAge: Int? = 18
     val testName: String = personName ?: "unknown"
     val testAge = personAge ?: return
 
-    baseSyntax.printText("Name is $testName, age is $testAge")
+    printText("Name is $testName, age is $testAge")
 
     //Destructuring declarations
-    baseSyntax.printText(destructuring)
+    printText(destructuring)
     val person = Person("Goku", 30)
     val (name, age) = person
-    baseSyntax.printText("Name = $name, Age = $age")
+    printText("Name = $name, Age = $age")
 
     //For loops, range expressions and destructuring
-    baseSyntax.printText(forLoopRange)
+    printText(forLoopRange)
 
     // iterating in the range 1 to 100
     println("// iterating in the range 1 to 100 \nfor(i in 1..200) {…}\n")
@@ -174,7 +170,7 @@ fun main() {
     for(i in 1..20) {
         result += "$i "
     }
-    baseSyntax.printText("i: = $result")
+    printText("i: = $result")
 
     // iterating backwards, in the range 100 to 1
     println("// iterating backwards, in the range 100 to 1 \nfor(i in 20 downTo 1){…}\n")
@@ -182,7 +178,7 @@ fun main() {
     for(i in 20 downTo 1) {
         result += "$i "
     }
-    baseSyntax.printText("i: = $result")
+    printText("i: = $result")
 
     // iterating over an array, getting every other element
     println("// iterating over an array, getting every other element \nval array = arrayOf(“a”, “b”, “x”) \nfor(i in 1 until array.size step 2 ){…}\n")
@@ -191,19 +187,19 @@ fun main() {
     for(i in 1 until array.size step 2 ){
         result += "$i "
     }
-    baseSyntax.printText("i: = $result")
+    printText("i: = $result")
 
     // iterating over an array with the item index and destructuring
     println("// iterating over an array with the item index and destructuring \nfor((index, element) in array.withIndex()) {…}\n")
     for((index, element) in array.withIndex()) {
-        baseSyntax.printText("index: = $index - element: = $element")
+        printText("index: = $index - element: = $element")
     }
 
     // iterating over a map
     println("// iterating over a map \nval map = mapOf(1 to “one”, 2 to “two”) \nfor( (key, value) in map){…}")
     val map = mapOf(1 to "one", 2 to "two")
     for( (key, value) in map){
-        baseSyntax.printText("index: = $key - element: = $value")
+        printText("index: = $key - element: = $value")
     }
 
     // functions
