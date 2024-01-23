@@ -1,12 +1,12 @@
-package com.carlosjr.days_of_kotlin.year_2024.january.week_03
+package com.carlosjr.days_of_kotlin.year_2024.a_january.week_03
 
-import com.carlosjr.days_of_kotlin.year_2024.january.week_03.BasicSyntaxThree.Companion.destructuring
-import com.carlosjr.days_of_kotlin.year_2024.january.week_03.BasicSyntaxThree.Companion.doWhileInKotlin
-import com.carlosjr.days_of_kotlin.year_2024.january.week_03.BasicSyntaxThree.Companion.elvisOperator
-import com.carlosjr.days_of_kotlin.year_2024.january.week_03.BasicSyntaxThree.Companion.forLoopRange
-import com.carlosjr.days_of_kotlin.year_2024.january.week_03.BasicSyntaxThree.Companion.iteratingListWithIndices
-import com.carlosjr.days_of_kotlin.year_2024.january.week_03.BasicSyntaxThree.Companion.loopForKotlin
-import com.carlosjr.days_of_kotlin.year_2024.january.week_03.BasicSyntaxThree.Companion.whileLoopKotlin
+import com.carlosjr.days_of_kotlin.year_2024.a_january.week_03.BasicSyntaxThree.Companion.destructuring
+import com.carlosjr.days_of_kotlin.year_2024.a_january.week_03.BasicSyntaxThree.Companion.doWhileInKotlin
+import com.carlosjr.days_of_kotlin.year_2024.a_january.week_03.BasicSyntaxThree.Companion.elvisOperator
+import com.carlosjr.days_of_kotlin.year_2024.a_january.week_03.BasicSyntaxThree.Companion.forLoopRange
+import com.carlosjr.days_of_kotlin.year_2024.a_january.week_03.BasicSyntaxThree.Companion.iteratingListWithIndices
+import com.carlosjr.days_of_kotlin.year_2024.a_january.week_03.BasicSyntaxThree.Companion.loopForKotlin
+import com.carlosjr.days_of_kotlin.year_2024.a_january.week_03.BasicSyntaxThree.Companion.whileLoopKotlin
 import com.carlosjr.extensions.printText
 import java.util.Scanner
 
@@ -206,6 +206,16 @@ fun main() {
     println("//Function in Kotlin\n")
     baseSyntax.sum(1, 2)
 
+    // Transform Object
+    println("//Transform Object\n")
+    val newPerson = person.toPersonTwo()
+    printText(newPerson.nameAge)
+
 }
 
 data class Person(val name: String, val age: Int)
+data class PersonTwo(val nameAge: String)
+
+fun Person.toPersonTwo(): PersonTwo {
+    return PersonTwo(nameAge = "$name - $age")
+}
