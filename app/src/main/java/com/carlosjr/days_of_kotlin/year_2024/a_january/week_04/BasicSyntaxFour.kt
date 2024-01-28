@@ -6,6 +6,8 @@ import com.carlosjr.extensions.printText
 
 class BasicSyntaxFour {
 
+    fun circumference(radius: Double) = 2 * Math.PI * radius
+
     companion object {
         const val arraysAges = "val ages = arrayOf(10, 20, 30)\n" +
                 "\n" +
@@ -20,6 +22,8 @@ class BasicSyntaxFour {
 }
 
 fun main() {
+    val basicSyntaxFour = BasicSyntaxFour()
+
     printText(arraysAges)
     val ages = arrayOf(10, 20, 30)
     val agesList = ages.toMutableList()
@@ -34,4 +38,8 @@ fun main() {
     for (i in numbers) {
         printText(i)
     }
+
+    printText("Function circumference()")
+    printText(basicSyntaxFour.circumference(5.2))
+
 }
