@@ -8,6 +8,9 @@ class BasicSyntaxFour {
 
     fun circumference(radius: Double) = 2 * Math.PI * radius
 
+    fun myFunction(x: Int, y: Int) = x + y
+
+
     companion object {
         const val arraysAges = "val ages = arrayOf(10, 20, 30)\n" +
                 "\n" +
@@ -39,7 +42,13 @@ fun main() {
         printText(i)
     }
 
+    // ---------------------------------------------------------------------
     printText("Function circumference()")
     printText(basicSyntaxFour.circumference(5.2))
+
+    // ---------------------------------------------------------------------
+    printText("fun myFunction(x: Int, y: Int) = x + y")
+    val result = basicSyntaxFour.myFunction(3, 5)
+    printText("myFunction(3, 5) = $result")
 
 }
